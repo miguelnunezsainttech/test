@@ -4,9 +4,12 @@ function exer(d1,d2){
   var milli_d2=d2.getTime();
   var milli_diff;
   (milli_d1>milli_d2)?milli_diff=milli_d1-milli_d2:milli_diff=milli_d2-milli_d1;
-  return Math.trunc(milli_diff/1000/60);
+  return mathTrunc(milli_diff/1000/60);
 }
 
+function mathTrunc (x) {
+    return (x < 0 ? Math.ceil(x) : Math.floor(x));
+}
 
 function execute(someFunction, date1,date2) {
   console.log("date1:"+date1);
